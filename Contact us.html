@@ -2,51 +2,84 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
- <meta name="viewport" content="width=device width,initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Me</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: brown;
+      background-color: white;
       padding: 20px;
+      margin: 0;
     }
+
     .contact-container {
       max-width: 600px;
-      margin: auto;
-      background: #fff;
+      margin: 40px auto;
+      background:   #00172d;
       padding: 25px;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      background-color: orange;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     }
+
     h2 {
-      color: #0055aa;
+      color: white;
+      text-align: center;
+      margin-bottom: 20px;
     }
+
     label {
       display: block;
-      margin-top: 10px;
-    }
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-    button {
       margin-top: 15px;
-      background-color: #0055aa;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      cursor: pointer;
+      font-weight: bold;
     }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      border-radius: 6px;
+      border: 1px solid white;
+      font-size: 14px;
+      box-sizing: border-box;
+      color: white;
+    }
+
+    button {
+      margin-top: 20px;
+      background-color: black;
+      color:  white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      width: 100%;
+    }
+    ur{
+      color: white;
+    }
+
+    button:hover {
+      background-color: green;
+    }
+
+    .info h3 {
+      text-align: center;
+      margin-top: 30px;
+      color: white;
+    }
+
+    .order-btn {
+      text-align: center;
+      margin-top: 30px;
+    }
+
     a.button {
       display: inline-block;
       padding: 10px 20px;
-      background-color: blue;
-      color: white;
+      background-color: white;
+      color: black;
       text-decoration: none;
       border-radius: 8px;
       font-size: 16px;
@@ -56,34 +89,33 @@
     a.button:hover {
       background-color: #00994d;
     }
-
-    .order-btn {
-      display: block;
-      text-align: center;
-      margin: 40px 0;
-    }
   </style>
 </head>
 <body>
 
-<div class="contact-container">
-  <h2>Contact Me</h2>
-  <form action=https://formspree.io/f/xrbledqr method="POST">
-      <label for="name">Your Name:</label>
+  <div class="contact-container">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/xrbledqr" method="POST">
+    <ur> <label for="name">Your Name:</label>
       <input type="text" id="name" name="name" placeholder="Your name" required>
 
       <label for="email">Your Email:</label>
-      <input type="email" id="email" name="email" placeholder="write your email" required>
+      <input type="email" id="email" name="email" placeholder="Write your email" required>
 
       <label for="message">Your Message:</label>
-      <textarea id="message" name="message" rows="5" placeholder="Tell us you think about the food, your conplain??..." required></textarea>
+      <textarea id="message" name="message" rows="5" placeholder="Tell us what you think about the school or your concerns..." required></textarea></ur> 
 
       <button type="submit">Send Message</button>
     </form>
+
     <div class="info">
-      <h3> we'll get back to you shortly</h3>
+      <h3>We'll get back to you shortly</h3>
     </div>
+
     <div class="order-btn">
-      <a class="button" href="index.html"> Back to Menu</a>
-</div>
+      <a class="button" href="University.html">Back to Home</a>
+    </div>
+  </div>
+
+</body>
 </html>

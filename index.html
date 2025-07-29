@@ -1,187 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flavors United – One World, One Plate</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prestige University</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
   <style>
-    body {
-      background-color: #fdf1f1;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    * {
       margin: 0;
       padding: 0;
-      text-align: center;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f4f6f9;
+      color: #333;
+      line-height: 1.6;
     }
 
     header {
-      background-color: #ffffff;
-      padding: 20px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      background-color: #002147;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
 
-    header h1 {
-      color: #7B1FA2;
-      font-size: 36px;
-      margin: 0;
+    nav {
+      background-color: #00172d;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px;
     }
 
-    .intro-banner {
-      background-color: #fff7f0;
-      padding: 10px;
-      color: #5D4037;
-      font-size: 20px;
-    }
-
-    img.hero {
-      width: 220px;
-      margin: 20px auto;
-      border-radius: 12px;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    }
-
-    .tagline {
-      font-size: 26px;
-      color: #4A148C;
-      margin-top: 10px;
-    }
-
-    .description {
-      padding: 0 30px;
-      font-size: 18px;
-      color: #444;
-    }
-
-    h3 {
-      color: #6A1B9A;
-      margin-top: 40px;
-      font-size: 22px;
-    }
-
-    ul.menu-links {
-      list-style-type: none;
-      padding: 0;
-      margin: 20px 0;
-    }
-
-    ul.menu-links li {
-      margin: 12px 0;
-    }
-
-    .food-button {
-      display: inline-block;
-      background-color: white;
-      color: #FF6F00;
-      border: 2px solid #FF6F00;
-      padding: 10px 24px;
-      border-radius: 6px;
+    nav a {
+      color: #f0f0f0;
       text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s ease;
+      font-weight: 500;
+      transition: color 0.3s ease;
     }
 
-    .food-button:hover {
-      background-color: #FF6F00;
-      color: white;
+    nav a:hover {
+      color: #ffc107;
     }
 
-    .order-section {
-      margin-top: 30px;
-    }
-
-    .order-section a {
-      background-color: #7B1FA2;
-      color: white;
-      padding: 12px 30px;
-      text-decoration: none;
-      border-radius: 6px;
-      font-size: 16px;
-    }
-
-    .order-section a:hover {
-      background-color: #4A0072;
-    }
-
-    .footer-message {
-      background-color: #4E342E;
-      color: white;
+    .container {
+      max-width: 1100px;
+      margin: auto;
       padding: 30px 20px;
-      margin-top: 40px;
     }
 
-    .footer-message h4 {
-      font-size: 20px;
-      margin-bottom: 20px;
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease-out forwards;
     }
 
-    footer {
+    .delay-1 { animation-delay: 0.3s; }
+    .delay-2 { animation-delay: 0.6s; }
+    .delay-3 { animation-delay: 0.9s; }
+    .delay-4 { animation-delay: 1.2s; }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero {
+      background: linear-gradient(to right, #003366, #00172d);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+      border-radius: 8px;
+      margin-bottom: 40px;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section h2 {
+      color: #002147;
+      margin-bottom: 15px;
+    }
+
+    .facilities-container {
+      background-color: #e9eef5;
+      padding: 40px 20px;
+      border-radius: 8px;
       margin-top: 20px;
     }
 
-    footer a {
-      color: #FFC1E3;
-      margin: 0 12px;
+    .facilities-links a {
+      display: inline-block;
+      margin-top: 10px;
+      margin-right: 20px;
       text-decoration: none;
+      color: #003366;
+      font-weight: bold;
     }
 
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    .chef-img {
-      margin: 30px auto 10px;
-    }
-
-    .chef-img img {
-      width: 180px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    footer {
+      background-color: #00172d;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 40px;
+      font-size: 0.9em;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Flavors United</h1>
-    <div class="intro-banner">
-      <marquee>Experience a global taste journey at Flavors United – Where Every Bite is a New Adventure</marquee>
-    </div>
+    <h1>Prestige University</h1>
+    <p>Excellence in Education, Innovation, and Research</p>
   </header>
 
-  <img src="world.jpg" alt="World Food Cultures" class="hero">
-
-  <p class="tagline">🌍 Taste the world on one plate! 🍽️</p>
-
-  <p class="description">
-    We serve food from different parts of the world. Enjoy Chinese, European, and all Nigerian dishes made by top chefs. Every meal is a celebration of culture and taste.
+<nav>
+  <p>
+    <a href="University.html">Home</a> ||
+    <a href="Science.html">Faculty of Science</a> ||
+    <a href="Art.html">Faculty of Arts</a> ||
+    <a href="admission.html">Admission</a> ||
+    <a href="Contact us.html">Contact Us</a>
   </p>
+</nav>
+  <!-- Main Content -->
+  <div class="container">
+    <section class="hero fade-in delay-1">
+      <h1>Welcome to Prestige University</h1>
+      <p>Your journey to academic excellence starts here.</p>
+    </section>
 
-  <h3>Explore Our International Menu:</h3>
-  <ul class="menu-links">
-    <li><a class="food-button" href="Chinese.html">Chinese Cuisine</a></li>
-    <li><a class="food-button" href="Yoruba.html">Yoruba Specialties</a></li>
-    <li><a class="food-button" href="European.html">European Flavors</a></li>
-    <li><a class="food-button" href="Hausa.html">Hausa Dishes</a></li>
-    <li><a class="food-button" href="Igbo.html">Igbo Meals</a></li>
-  </ul>
-
-  <div class="order-section">
-    <a href="Order.html">Place Your Order</a>
+    <section class="section fade-in delay-2">
+      <h2>About Us</h2>
+      <p>
+        Prestige University is committed to providing quality education with a focus on research,
+        innovation, and global impact. Our campus is a vibrant community where students thrive academically,
+        socially, and personally.
+      </p>
+    </section>
   </div>
 
-  <div class="footer-message">
-    <h4>Thank you for visiting Flavors United!</h4>
-    <p>
-      We hope your culinary journey with us was flavorful and satisfying. We're excited to have you back again for more taste adventures. Until then, bon appétit!
-    </p>
-
-    <footer>
-      <a href="About us.html">About Us</a> |
-      <a href="Contact us.html">Contact Us</a>
-      <p>&copy; 2025 Cruise Chops | Designed by EMMY CHOPS</p>
-    </footer>
+  <!-- Facilities Section in a Separate Container -->
+  <div class="container facilities-container fade-in delay-3">
+    <section class="section">
+      <h2>Our Faculties</h2>
+      <p>Explore the academic divisions that power Prestige University's learning experience.</p>
+      <div class="facilities-links">
+        <a href="faculty-science.html">Faculty of Science →</a>
+        <a href="faculty-arts.html">Faculty of Arts →</a>
+      </div>
+    </section>
   </div>
 
-  <div class="chef-img">
-    <img src="chief.jpg" alt="Our Head Chef">
+  <!-- Admission & Contact Teasers -->
+  <div class="container">
+    <section class="section fade-in delay-4">
+      <h2>Join Us</h2>
+      <p>
+        Learn about our admission requirements and begin your journey to academic and professional success.
+      </p>
+      <a href="admission.html" style="color: #003366; text-decoration: underline;">Apply Now →</a>
+    </section>
+
+    <section class="section fade-in delay-4">
+      <h2>Contact Us</h2>
+      <p>
+        Need more information? Reach out to our support team or visit our campus for a guided tour.
+      </p>
+      <a href="Contact us.html" style="color: #003366; text-decoration: underline;">Get in Touch →</a>
+    </section>
   </div>
+
+  <footer>
+    &copy; 2025 Prestige University. All rights reserved. | Location: Nigeria | Email: info@prestigeuniv.edu
+  </footer>
+
 </body>
 </html>
